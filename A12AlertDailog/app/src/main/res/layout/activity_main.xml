@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <Button
+        android:id="@+id/btn_alert_basic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AlertDialog(기본형)"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/btn_alert_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AlertDialog(목록형)"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/btn_alert_radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AlertDialog(라디오버튼형)"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/btn_alert_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AlertDialog(체크박스형)"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/btn_alert_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="프로그레스 다이얼로그"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/btn_alert_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="커스텀 다이얼로그"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>

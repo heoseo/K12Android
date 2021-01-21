@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--
+    - orientation : 레이아웃 전체의 가로형 혹은 세로형 배치를 결정
+    - layout_width : 뷰를 선언할 떄 반드시 설정해야 하는 속성으로
+                     가로에서 컨텐츠의 크기만큼 혹은 전체를 채울지 여부를 결정
+    - layout_height : 세로에서 결정하고 위와 동일
+            - match_parent : 부모레이아웃의 전체를 채움(블럭엘리먼트와 동일)
+            - wrap_content : 컨텐츠의 크기만큼만 영역을 차지(인라인엘리먼트와 동일)
+    -->
+
+    <!-- 첫번쨰 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffff00"
+        android:gravity="center">
+
+        <!--
+         - gravity : 레이아웃 하위(자식)의 뷰를 정렬할 떄 사용하는 속성
+         - layout_gravity : 뷰 자체를 정렬할 때 사용하는 속성
+                            만약 두가지 속성으 ㄹ동시에 부여할 때는 |(파이프)를 사용한다.
+         -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="버튼1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="버튼2"
+            app:backgroundTint="#B51111" />
+
+    </LinearLayout>
+
+
+    <!-- 두번쨰 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ff0000">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="버튼1"/>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:gravity="right|bottom"
+            android:text="버튼2"/>
+
+    </LinearLayout>
+
+
+    <!-- 세번째 레이아웃 -->
+    <!--
+    - baselineAligned :
+        true일 때 : 텍스트의 하단을 기준으로 정렬
+        false일 떄 : 텍스트의 상단을 기준으로 정렬 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="true"
+        android:background="#00ff00">
+
+        <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="텍스트1"
+              android:textSize="30sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="텍스트1"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="텍스트2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="텍스트3"
+            android:textSize="40sp"/>
+
+    </LinearLayout>
+
+
+    <!-- 네번째 레이아웃 -->
+    <!--
+        - layout_weight
+            : 뷰의 가중치를 부여할 때 사용하는 속성으로 특정 사이즈 없이
+              지율로 크기를 결정한다.
+            : HTML에서 %를 사용하는 것과 비슷하다.
+            : 단, 가중치를 사용할때는 가로 혹은 세로크기를 0dp로 설정해야한다. -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#00ffff">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="버튼1"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="버튼2"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="버튼3"/>
+
+    </LinearLayout>
+
+    <!-- 다섯번째 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#889977">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="버튼1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="버튼2"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:text="버튼3"/>
+
+    </LinearLayout>
+
+</LinearLayout>
